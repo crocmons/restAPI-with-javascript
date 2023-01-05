@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <h2>Movie Data</h2>
+  <table>
+    <tr>
+      <th>Movies Name</th>
+      <th>Ratings</th>
+      <th>Release Date</th>
+    </tr>
+    <tr>
+
+    </tr>
+    
+</table>
+    <script>
+fetch(`https://app.codescreen.com/api/assessments/films`, {
+
+method: 'GET',
+
+headers: {
+
+    'Authorization': '8c5996d5-fb89-46c9-8821-7063cfbc18b1',
+
+}
+
+})
+
+.then(response => response.json())
+
+.then(data => {
+
+console.log(data);
+data.map((td)=>{
+   const markup = `
+   <tr>
+    <td>${td.name}</td>
+    <td>${td.rating}</td>
+    <td>${td.releaseDate}</td>
+    </tr>
+    `;
+    document.querySelector('table').innerHTML += markup;
+})
+
+
+})
+
+.catch((err)=>
+   console.log(err)
+)
+
+
+
+    </script>
+</body>
+</html>
+
+
+

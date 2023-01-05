@@ -1,0 +1,31 @@
+body{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+}
+h2{
+    text-align: center;
+}
+.wrapper{
+    align-items: center;
+}
+table{
+    text-align: center;
+    align-items: center;
+}
+tr{
+    text-align: start;
+    margin: 8px;
+}
+th{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+td{
+    text-align: start;
+    margin: 10px;
+    padding: 5px;
+}
